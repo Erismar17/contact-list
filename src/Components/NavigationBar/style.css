@@ -14,6 +14,7 @@
 .line-header {
     border-top-color: rgb(189, 188, 188) solid;
     width: 100%;
+    box-shadow: 0px 3px 7px 0px rgba(189,189,189,1);
 }
 
 .header-views {

@@ -1,0 +1,51 @@
+.form-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.form {
+    background-color: #C1D72F;
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.input-form {
+    background-color: #D8E47A;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.checked {
+    background-color: #C1D72F;
+    margin-top: 5%;
+}
+
+.checked:checked {
+    background-color: #C1D72F;
+}
+
+.saved {
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    margin: 20px auto;
+    display: flex;
+}
+
+.label-form {
+    margin-top: 10px;
+}
