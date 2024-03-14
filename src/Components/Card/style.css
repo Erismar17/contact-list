@@ -1,3 +1,27 @@
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+} @media (max-width: 990px) {
+    .row {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media (max-width: 750px) {
+      .row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @media (max-width: 500px) {
+        .row {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+  }
+
 .cards {
     background: rgb(255, 255, 255);
     box-shadow: 0 7px 10px rgb(207, 207, 207);
@@ -9,6 +33,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .avatar {
@@ -16,6 +41,8 @@
     height: 40%;
     width: 43%;
     margin-top: 10px;
+    
+} .favorite {
     border: 3px solid #C1D72F;
 }
 
@@ -38,11 +65,21 @@ hr {
 }
 
 .button {
+    border: 1px solid;
     border-radius: 5px;
-    border-color: #CF6679;
-    color:#CF6679;
     background-color: transparent;
     border-width: 1px;
     align-items: center;
     cursor: pointer;
+} .button-contact {
+    border-color: #C1D72F;
+    color:#C1D72F;
+    padding-top: 3px;
+} .button-favorite {
+    border-color: #CF6679;
+    color:#CF6679;
+}
+
+.add-favorite {
+    height: 20px;
 }

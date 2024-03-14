@@ -3,8 +3,8 @@
 }
 
 .container-general {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .head-card-favorites {
@@ -12,19 +12,17 @@
     align-items: center;
 }
 
+.container-green-line {
+    width: 100%;
+}
+
 .green-line {
     background: #C1D72F;
     height: 2px;
-    width: 780px;
+    width: 100%;
     margin-left: 30px;
     margin-top: 5px;
 }
-
-/* @media (width <= 800px) {
-    .green-line {
-        width: 200px;
-    }
-} */
 
 .title-favorites {
     font-size: 30px;    

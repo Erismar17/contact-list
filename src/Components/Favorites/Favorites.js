@@ -1,5 +1,5 @@
 import './style.css'
-import Card from '../Card/index.js';
+import Card from '../Card/Card.js';
 
 /* Utilizar hooks para cambiar el titulo */
 
@@ -10,12 +10,12 @@ const Favorites = () => {
                 <div>
                     <h1 className={'title-favorites'}>Favorites</h1>
                 </div>
-                <div>
+                <div className='container-green-line'>
                     <div className={'green-line'}></div>
                 </div>
             </div>
 
-            <div><Card /></div>
+            <div><Card type="favorite"/></div>
         </div>
     )
 };

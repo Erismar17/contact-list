@@ -3,8 +3,8 @@
 }
 
 .container-general-contacts {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .head-card-contacts {
@@ -17,10 +17,13 @@
     font-weight: 600;
 }
 
+.container-green-line {
+    width: 100%;
+}
+
 .green-line {
     background: #C1D72F;
     height: 2px;
-    width: 740px;
     margin-left: 30px;
     margin-top: 5px;
 }

@@ -2,7 +2,8 @@ import './style.css';
 
 const Modal = ({isOpen, closeModal}) => {
     if (!isOpen) return null;
-    
+    /* crear el useState para almacenar la información de cada user, un handleChange para cada uno de los inputs
+       */
     return (
         <div className={'form-position'}>
             <div className={'form'}>

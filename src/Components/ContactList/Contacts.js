@@ -1,5 +1,5 @@
 import './style.css'
-import Card from '../Card/index.js';
+import Card from '../Card/Card.js';
 
 /* Utilizar hooks para cambiar el titulo */
 
@@ -10,11 +10,11 @@ const ContactsList = () => {
                 <div>
                 <h1 className={'title-contacts'}>Contact List</h1>
                 </div>
-                <div>
+                <div className='container-green-line'>
                     <div className={'green-line'}></div>
                 </div>
             </div>
-            <Card />
+            <Card type="contact"/>
         </div>
     )
 };
