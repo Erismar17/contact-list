@@ -16,9 +16,9 @@ const router = createBrowserRouter ([
     element: <NavBar />,
     errorElement: <NotFound/>,
     children: [
-      /* con esta ruta siempre renderiza o inicializa la app con la ruta que le pongo en el to='' */
+      /* con esta ruta siempre se renderiza o inicializa la app con la ruta que le pongo en el to='' */
+              /* ruta hija inicial */
       {
-        /* ruta hija inicial */
         index: true,
         element: <Navigate to='overview' replace/>,
       },

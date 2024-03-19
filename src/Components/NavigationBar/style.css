@@ -20,6 +20,11 @@
 .header-views {
     display: flex;
     justify-content: space-between;
+} @media (max-width: 800px) {
+    .right-side-header {
+        display: block;
+        flex-direction: column;
+    }
 }
 
 .logo {

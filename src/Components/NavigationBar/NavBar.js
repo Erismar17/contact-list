@@ -1,9 +1,8 @@
 import './style.css';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import logo from './img/logo.png';
 import { useState } from 'react';
 import Modal from '../Modal/ModalView';
-import { Outlet } from 'react-router-dom';
 
 const NavBar = () => {
     let [modal, setModal] = useState(false);
