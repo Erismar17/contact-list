@@ -14,8 +14,6 @@ const NavBar = () => {
         <div className={'page-content'}>
             <header className={'header'}>
                 <div className={'header-views'}>
-                    {/* meter el logo en un div */}
-                    {/* crear media query para el logo y botones, cambiar header view a dblock, flex direction: column*/}
                     <div>
                         <img className='logo' src={logo} alt='logo'/>
                     </div>

@@ -17,7 +17,7 @@ const Card = (props) => {
             obtenerUsers();
         } else if (type === 'favorite') {
             setIsFavorite(true);
-/*             localStorage.removeItem('listFavorites') */
+            /* localStorage.removeItem('listFavorites') */
             let list = localStorage.getItem("listFavorites");
             if (list != null) {
                 const favoritesArray = JSON.parse(list);

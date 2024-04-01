@@ -7,7 +7,7 @@ const ContactsList = () => {
     return (
         <div className={'container-general-contacts'}>
             <div className={'head-card-contacts'}>
-                <div>
+                <div className={'title'}>
                 <h1 className={'title-contacts'}>Contact List</h1>
                 </div>
                 <div className='container-green-line'>

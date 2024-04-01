@@ -12,6 +12,10 @@
     align-items: center;
 }
 
+.title {
+    width: 20%;
+}
+
 .title-contacts {
     font-size: 30px;    
     font-weight: 600;
@@ -24,6 +28,5 @@
 .green-line {
     background: #C1D72F;
     height: 2px;
-    margin-left: 30px;
     margin-top: 5px;
 }
