@@ -1,9 +1,11 @@
 import './style.css'
 import Card from '../Card/Card.js';
-
-/* Utilizar hooks para cambiar el titulo */
+import { useSelector } from 'react-redux';
 
 const ContactsList = () => {
+    const {contacts} = useSelector((state) => state.contacts);
+    const contactsList = contacts.filter(contact => !contact.isDeleted);
+
     return (
         <div className={'container-general-contacts'}>
             <div className={'head-card-contacts'}>
@@ -14,7 +16,7 @@ const ContactsList = () => {
                     <div className={'green-line'}></div>
                 </div>
             </div>
-            <Card type="contact"/>
+            <Card contacts={contactsList} type="contact"/>
         </div>
     )
 };

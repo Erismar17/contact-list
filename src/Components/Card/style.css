@@ -71,11 +71,16 @@ hr {
     border-width: 1px;
     align-items: center;
     cursor: pointer;
-} .button-contact {
+}
+
+.button-contact {
     border-color: #C1D72F;
     color:#C1D72F;
     padding-top: 3px;
-} .button-favorite {
+    margin-right: 15px;
+}
+
+.button-favorite {
     border-color: #CF6679;
     color:#CF6679;
 }

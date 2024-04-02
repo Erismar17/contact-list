@@ -7,7 +7,7 @@ import NotFound from './Components/Error/Error';
 import reportWebVitals from './reportWebVitals';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux'
-import store from './Redux/store';
+import store from './Redux/Store';
 import React from 'react';
 import './index.css';
 
