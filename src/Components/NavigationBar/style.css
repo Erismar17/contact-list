@@ -82,3 +82,11 @@
         display: none;
     }
 }
+
+.load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-weight: 500;
+}

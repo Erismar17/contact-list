@@ -1,6 +1,7 @@
 import { addContact } from '../../Redux/contactSlice';
 import { useDispatch } from 'react-redux';
 import avatarImg from './img/avatar.png';
+import { addContactAPI } from '../../API';
 import { useState } from 'react';
 import './style.css';
 
@@ -11,17 +12,17 @@ const Modal = ({isOpen}) => {
     const [isFavorite, setIsFavorite] = useState(false);
     const dispatch = useDispatch();
     
-    const addUser = (e) => {
+    const addUser = async(e) => {
         e.preventDefault();
         const avatar = avatarImg;
-        console.log(first_name, last_name, email, isFavorite);
-        dispatch(addContact({first_name, last_name, email, isFavorite, avatar}));
+        const user = {first_name, last_name, email, isFavorite, avatar, isDeleted: false};
+        dispatch(addContact(user));
+        await addContactAPI(user);
 
         setFirstName('');
         setLastName('');
         setEmail('');
         setIsFavorite(false);
-
     }
     if (!isOpen) return null;
 

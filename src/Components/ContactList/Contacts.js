@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const ContactsList = () => {
     const {contacts} = useSelector((state) => state.contacts);
-    const contactsList = contacts.filter(contact => !contact.isDeleted);
+    const contactsList = contacts.filter(contact => contact.isDeleted === false);
 
     return (
         <div className={'container-general-contacts'}>

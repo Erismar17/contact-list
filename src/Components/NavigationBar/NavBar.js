@@ -1,12 +1,14 @@
-import './style.css';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, Outlet } from 'react-router-dom';
-import logo from './img/logo.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Modal from '../Modal/ModalView';
+import { getContactsAPI } from '../../API';
+import logo from './img/logo.png';
 import Menu from './Menu/Menu';
+import './style.css';
+import { setContacts } from '../../Redux/contactSlice';
 
 const NavBar = () => {
-    
     let [menu, setMenu] = useState(false);
     const toggleMenu = () => {
         setMenu(!menu);
@@ -16,6 +18,17 @@ const NavBar = () => {
     const toggleModal = () => {
         setModal(!modal);
     }
+
+    const dispatch = useDispatch();
+    const {contacts} = useSelector((state) => state.contacts);
+
+    useEffect( () => {
+        (async () => {
+            /* Trae la inf del json server */
+            const values = await getContactsAPI()
+            dispatch(setContacts(values));
+        })();
+    }, [])
 
     return (
         <div className={'page-content'}>
@@ -40,7 +53,7 @@ const NavBar = () => {
             </header>
             <Menu isOpen={menu} closeMenu={() => setMenu(false)} />
             <Modal isOpen={modal} closeModal={() => setModal(false)} />
-            <Outlet/>
+            {contacts.length < 1 ? <h1 className={'load'}>Loading...</h1> : <Outlet/> }
         </div>
     )
 };

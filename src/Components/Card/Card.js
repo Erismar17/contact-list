@@ -1,17 +1,20 @@
 import { removeContact, toggleFavorite } from '../../Redux/contactSlice';
 import { useDispatch } from 'react-redux';
 import './style.css'
+import { updateContactAPI } from '../../API';
 
 const Card = (props) => {
     const contacts = props.contacts;
     const dispatch = useDispatch();
 
-    const handleFavorite = (user) => {
+    const handleFavorite = async(user) => {
       dispatch(toggleFavorite(user.id));
+      await updateContactAPI({...user, isFavorite: !user.isFavorite});
     }
 
-    const removeUser = (user) => {
+    const removeUser = async(user) => {
       dispatch(removeContact(user.id));
+      await updateContactAPI({...user, isDeleted: true});
     }
 
        return (
@@ -35,7 +38,7 @@ const Card = (props) => {
                 <button
                   className={`button ${user.isFavorite ? 'button-contact' : 'button-favorite'}`}
                   onClick={() => removeUser(user)}
-                ><span class="material-symbols-rounded">delete</span></button>
+                ><span className="material-symbols-rounded">delete</span></button>
                   }
               </div>
             </div>
