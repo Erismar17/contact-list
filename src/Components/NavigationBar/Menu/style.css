@@ -1,0 +1,28 @@
+.container-menu {
+    background: #C1D72F;
+    border-radius: 5px;
+}
+
+.menu-open {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.overview-menu, 
+.contacts-menu,
+.favorites-menu {
+    margin-right: 35px;
+    background: none;
+    border: none;
+    font-size: medium;
+    font-weight: 600;
+}
+
+@media (min-width: 760px) {
+    .overview-menu, 
+    .contacts-menu,
+    .favorites-menu {
+        display: none;
+    }
+}

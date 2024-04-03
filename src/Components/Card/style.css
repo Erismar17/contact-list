@@ -40,9 +40,9 @@
     border-radius: 200px;
     height: 40%;
     width: 43%;
-    margin-top: 10px;
-    
-} .favorite {
+}
+
+.favorite {
     border: 3px solid #C1D72F;
 }
 
@@ -76,7 +76,6 @@ hr {
 .button-contact {
     border-color: #C1D72F;
     color:#C1D72F;
-    padding-top: 3px;
     margin-right: 15px;
 }
 

@@ -121,6 +121,10 @@ const contactSlice = createSlice ({
             state.contacts.push(action.payload)
         },
 
+        setContacts: (state, action) => {
+            state.contacts = action.payload;
+        },
+
         removeContact: (state, action) => {
             const id = action.payload;
             const contactId = state.contacts.findIndex(contact => contact.id === id);
@@ -137,5 +141,5 @@ const contactSlice = createSlice ({
     }
 })
 
-export const { addContact, removeContact, toggleFavorite } = contactSlice.actions;
+export const { addContact, setContacts, removeContact, toggleFavorite } = contactSlice.actions;
 export default contactSlice.reducer;

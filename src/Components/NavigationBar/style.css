@@ -20,11 +20,6 @@
 .header-views {
     display: flex;
     justify-content: space-between;
-} @media (max-width: 800px) {
-    .right-side-header {
-        display: block;
-        flex-direction: column;
-    }
 }
 
 .logo {
@@ -38,7 +33,9 @@
     margin-right: 45px;
 }
 
-.overview, .contacts, .favorites {
+.overview,
+.contacts,
+.favorites {
     margin-right: 35px;
     background: none;
     border: none;
@@ -46,9 +43,21 @@
     font-weight: 600;
 }
 
-.overview:hover, .contacts:hover, .favorites:hover {
+.overview:hover,
+.contacts:hover,
+.favorites:hover {
     cursor: pointer;
     color: #C1D72F;
+}
+
+.menu {
+    background-color: #C1D72F;
+    display: none;
+    transition: 5s ease all;
+    background-color: none;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 .new {
@@ -59,4 +68,17 @@
     font-weight: 600;
     border: none;
     cursor: pointer;
+}
+
+@media (max-width: 760px) {
+    .menu {
+        display: inline-block;
+        margin-left: 15px;
+        transition: 5s ease all;
+    }
+    .overview,
+    .contacts,
+    .favorites {
+        display: none;
+    }
 }

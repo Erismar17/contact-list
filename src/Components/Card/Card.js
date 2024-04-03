@@ -35,7 +35,7 @@ const Card = (props) => {
                 <button
                   className={`button ${user.isFavorite ? 'button-contact' : 'button-favorite'}`}
                   onClick={() => removeUser(user)}
-                ><span className="material-symbols-outlined">delete</span></button>
+                ><span class="material-symbols-rounded">delete</span></button>
                   }
               </div>
             </div>
