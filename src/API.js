@@ -10,6 +10,7 @@ const getContactsAPI = async(contact) => {
     return data;
 };
 
+
 const addContactAPI = async(contact) => {
     await axios.post("http://localhost:8000/contacts", contact);
 };
@@ -18,5 +19,9 @@ const updateContactAPI = async(contact) => {
     await axios.put(`http://localhost:8000/contacts/${contact.id}`, contact);
 };
 
+const getContactById = async(id) => {
+    const {data} = await axios.get(`http://localhost:8000/contacts/${id}`, id);
+    return data;
+};
 
-export { getContacts, getContactsAPI, addContactAPI, updateContactAPI }
+export { getContacts, getContactsAPI, addContactAPI, updateContactAPI, getContactById }

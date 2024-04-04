@@ -1,0 +1,37 @@
+.profile-details {
+    margin-top: 3%;
+    background-color: #ececec;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.avatar-profile {
+    height: 150px;
+    border-radius: 200px;
+}
+
+.full-name-profile span, .email-profile span {
+    font-weight: 700;
+}
+
+.avatar-profile, .right-side-details {
+    margin: 0 30px;
+}
+
+.back {
+    background-color: #C1D72F;
+    border: 1px solid #95a81a;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 50px;
+    margin-top: 0.5rem;
+    font-size: medium;
+    color: white;
+}
+
+.full-name-profile {
+    margin-top: 35px;
+}

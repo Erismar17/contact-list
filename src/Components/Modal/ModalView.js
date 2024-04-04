@@ -5,7 +5,7 @@ import { addContactAPI } from '../../API';
 import { useState } from 'react';
 import './style.css';
 
-const Modal = ({isOpen}) => {
+const Modal = ({isOpen, lastId}) => {
     const [first_name, setFirstName] = useState('');
     const [last_name, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -15,7 +15,8 @@ const Modal = ({isOpen}) => {
     const addUser = async(e) => {
         e.preventDefault();
         const avatar = avatarImg;
-        const user = {first_name, last_name, email, isFavorite, avatar, isDeleted: false};
+        const id = ''+(lastId+1)+'';
+        const user = {id, email, first_name, last_name, avatar, isFavorite, isDeleted: false};
         dispatch(addContact(user));
         await addContactAPI(user);
 

@@ -3,6 +3,7 @@ import ContactsList from './Components/ContactList/Contacts';
 import Favorites from './Components/Favorites/Favorites';
 import NavBar from './Components/NavigationBar/NavBar';
 import Overview from './Components/Overview/Overview';
+import Detail from './Components/Details/Detail';
 import NotFound from './Components/Error/Error';
 import reportWebVitals from './reportWebVitals';
 import ReactDOM from 'react-dom/client';
@@ -35,6 +36,10 @@ const router = createBrowserRouter ([
       {
         path: "contacts",
         element: <ContactsList />,
+      },
+      {
+        path: "/details/:id",
+        element: <Detail />,
       },
     ]
   },

@@ -9,6 +9,8 @@ import './style.css';
 import { setContacts } from '../../Redux/contactSlice';
 
 const NavBar = () => {
+    const [lastId, setLastId] = useState(null);
+
     let [menu, setMenu] = useState(false);
     const toggleMenu = () => {
         setMenu(!menu);
@@ -22,13 +24,20 @@ const NavBar = () => {
     const dispatch = useDispatch();
     const {contacts} = useSelector((state) => state.contacts);
 
-    useEffect( () => {
+    useEffect(() => {
         (async () => {
-            /* Trae la inf del json server */
-            const values = await getContactsAPI()
-            dispatch(setContacts(values));
+          /* Trae la inf del json server */
+          const values = await getContactsAPI();
+          dispatch(setContacts(values));
+      
+          // Obtener el último ID
+          const lastId = values.reduce((maxId, contact) => {
+            /* El método reduce() devuelve como resultado un único valor */
+            return Math.max(maxId, contact.id);
+          }, 0);
+          setLastId(lastId);
         })();
-    }, [])
+      }, []);
 
     return (
         <div className={'page-content'}>
@@ -52,7 +61,7 @@ const NavBar = () => {
                 <hr className={'line-header'}/>
             </header>
             <Menu isOpen={menu} closeMenu={() => setMenu(false)} />
-            <Modal isOpen={modal} closeModal={() => setModal(false)} />
+            <Modal isOpen={modal} closeModal={() => setModal(false)} lastId={lastId} />
             {contacts.length < 1 ? <h1 className={'load'}>Loading...</h1> : <Outlet/> }
         </div>
     )

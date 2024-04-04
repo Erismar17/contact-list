@@ -1,7 +1,8 @@
 import { removeContact, toggleFavorite } from '../../Redux/contactSlice';
-import { useDispatch } from 'react-redux';
-import './style.css'
 import { updateContactAPI } from '../../API';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import './style.css'
 
 const Card = (props) => {
     const contacts = props.contacts;
@@ -23,7 +24,9 @@ const Card = (props) => {
             <div className='cards' key={index}>
               <img className={`avatar ${user.isFavorite ? 'favorite' : ''}`} src={user.avatar} alt='avatar' />
               <div className='contact-information'>
-                <p className='full-name'>{user.first_name} {user.last_name}</p>
+                <Link to={`/details/${user.id}`} style={{textDecoration:'none'}}>
+                  <p className='full-name'>{user.first_name} {user.last_name}</p>
+                </Link>
                 <p className='email'>{user.email}</p>
                 <hr />
                 <button
