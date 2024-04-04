@@ -2,8 +2,6 @@ import { useSelector } from 'react-redux';
 import Card from '../Card/Card.js';
 import './style.css'
 
-/* Utilizar hooks para cambiar el titulo */
-
 const Favorites = () => {
     const {contacts} = useSelector((state) => state.contacts);
     const favorites = contacts.filter(contact => contact.isFavorite && !contact.isDeleted);
@@ -17,7 +15,6 @@ const Favorites = () => {
                     <div className={'green-line'}></div>
                 </div>
             </div>
-
             <div><Card contacts={favorites} type="favorite"/></div>
         </div>
     )

@@ -47,8 +47,7 @@ const Modal = ({isOpen, lastId}) => {
 
                     <input
                         value={isFavorite} onChange={e => setIsFavorite(e.target.value)}
-                        checked={isFavorite} name='isFavorite' className='checked' type='checkbox' id='check'
-                    />
+                        checked={isFavorite} name='isFavorite' className='checked' type='checkbox' id='check' />
                     <button className={'saved'}type='submit'>Save</button>
                 </form>
             </div>

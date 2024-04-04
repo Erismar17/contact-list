@@ -37,12 +37,12 @@ const Card = (props) => {
                   {user.isFavorite ? 'X REMOVE' : <span className="material-symbols-rounded">favorite</span>}
                 </button> 
               {!user.isFavorite &&
-
                 <button
                   className={`button ${user.isFavorite ? 'button-contact' : 'button-favorite'}`}
-                  onClick={() => removeUser(user)}
-                ><span className="material-symbols-rounded">delete</span></button>
-                  }
+                  onClick={() => removeUser(user)}>
+                  <span className="material-symbols-rounded">delete</span>
+                </button>
+              }
               </div>
             </div>
           ))}
